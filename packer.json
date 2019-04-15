@@ -1,7 +1,7 @@
       {
       "builders": [
         {
-          "image_name": "{{user `image_family`}}-${BUILD_NUMBER}",
+          "image_name": "{{user `image_family`}}-{{user `BUILD_NUMBER`}}",
           "type": "googlecompute",
           "project_id": "{{user `project`}}",
           "source_image_family": "{{user `source_image_family`}}",
