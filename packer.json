@@ -1,5 +1,5 @@
-      {
-      "builders": [
+{
+  "builders": [
         {
           "image_name": "{{user `image_family`}}-{{user `build_number`}}",
           "type": "googlecompute",
@@ -15,6 +15,15 @@
             "https://www.googleapis.com/auth/devstorage.full_control"
           ]
         }
-        ]
-      }
+  ],
+  "post-processors": [
+    {
+      "type": "googlecompute-export",
+      "paths": [
+        "gs://{{user `project`}}-jenkins-artifacts/{{user `job_name`}}/{{user `build_number`}}/{{user `image_family`}}.tar.gz"
+      ],
+      "keep_input_artifact": true
+    }
+  ]
+}
 
