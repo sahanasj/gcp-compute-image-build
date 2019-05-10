@@ -7,6 +7,7 @@ sudo apt-get install -y curl gnupg build-essential
 sudo apt-get install -y python-pip python-dev
 sudo apt-get install -y software-properties-common
 
+# Ruby and Rails Packages
 sudo apt-add-repository -y ppa:rael-gc/rvm
 sudo apt update
 sudo apt install -y rvm
@@ -18,3 +19,6 @@ rvmsudo rvm fix-permissions
 rvmsudo rvm install 2.2.2
 rvmsudo rvm install 2.5.3
 sudo gem install rails -v 4.1.0
+
+# Python Packages
+pip install -r ./quazi/python_requirements.txt
