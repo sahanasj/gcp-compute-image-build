@@ -17,12 +17,12 @@
   ],
   "provisioners": [{
       "type": "shell",
-      "scripts": "install-package.sh",
+      "scripts": "{{user `team_name`}}/install-package.sh",
       "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E {{ .Path }}"
     },
     {
       "type": "shell",
-      "scripts": "quazi/python_requirements.txt",
+      "scripts": "{{user `team_name`}}/python_requirements.txt",
       "execute_command": "sudo -H pip install -r {{ .Path }}"
     }
   ],
