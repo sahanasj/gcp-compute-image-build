@@ -6,6 +6,9 @@ sudo apt-get install -y unicorn
 sudo apt-get install -y curl gnupg build-essential
 sudo apt-get install -y python-pip python-dev
 sudo apt-get install -y software-properties-common
+wget https://releases.hashicorp.com/packer/1.4.0/packer_1.4.0_linux_amd64.zip
+unzip packer_1.4.0_linux_amd64.zip
+sudo mv packer /usr/bin/
 
 # Ruby and Rails Packages
 sudo apt-add-repository -y ppa:rael-gc/rvm
